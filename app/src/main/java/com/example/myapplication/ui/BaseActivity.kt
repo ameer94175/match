@@ -1,0 +1,31 @@
+package com.example.myapplication.ui
+
+import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
+import androidx.appcompat.app.AppCompatActivity
+import androidx.viewbinding.ViewBinding
+
+
+abstract class BaseActivity<VB:ViewBinding?>: AppCompatActivity() {
+
+    abstract val LOG_TAG:String
+    abstract val bindgInFlater:(LayoutInflater)-> VB
+    private var _binding:ViewBinding?=null
+protected val binding
+  get() = _binding as VB
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        _binding = bindgInFlater(layoutInflater)
+        setContentView(requireNotNull(_binding).root)
+        setup()
+        addCallbaks()
+    }
+    abstract fun setup()
+    abstract fun addCallbaks()
+
+    protected fun log(value:Any){
+        Log.v(LOG_TAG,value.toString())
+    }
+}

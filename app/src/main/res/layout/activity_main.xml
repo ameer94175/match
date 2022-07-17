@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+   android:background="@color/colorff">
+
+    <TextView
+        android:id="@+id/boutten_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colortt"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="2010"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/buttun_slash"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintLeft_toLeftOf="@id/buttun_slash"
+        app:layout_constraintRight_toRightOf="@id/buttun_slash" />
+
+    <TextView
+        android:id="@+id/buttun_slash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colortt"
+        android:gravity="center"
+        android:layout_marginBottom="500dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/buttun_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colortt"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="7"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttun_slash"
+        app:layout_constraintLeft_toRightOf="@id/buttun_slash"
+       app:layout_constraintRight_toLeftOf="@id/Germany"
+        app:layout_constraintTop_toTopOf="@+id/buttun_slash" />
+
+    <TextView
+        android:id="@+id/buttun_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colortt"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttun_slash"
+        app:layout_constraintLeft_toRightOf="@id/Brazil"
+        app:layout_constraintRight_toLeftOf="@id/buttun_slash"
+        app:layout_constraintTop_toTopOf="@+id/buttun_slash" />
+
+    <TextView
+        android:id="@+id/buttun_Stadiumname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colortt"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Stadium name"
+        android:textSize="20sp"
+      app:layout_constraintTop_toBottomOf="@id/buttun_slash"
+        app:layout_constraintRight_toRightOf="@id/buttun_slash"
+        app:layout_constraintLeft_toLeftOf="@id/buttun_slash"/>
+
+    <TextView
+        android:id="@+id/Brazil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colortt"
+        android:gravity="center"
+        android:text="Brazil"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttun_slash"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toLeftOf="@id/buttun_0"
+        app:layout_constraintTop_toTopOf="@+id/buttun_slash"
+        />
+
+    <TextView
+        android:id="@+id/Germany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="64dp"
+        android:background="@color/colortt"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Germany"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttun_slash"
+        app:layout_constraintLeft_toRightOf="@id/buttun_7"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttun_slash"
+        />
+
+    <ImageView
+        android:id="@+id/iconNext"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_switch_left_24"
+        app:layout_constraintTop_toBottomOf="@id/buttun_Stadiumname"
+        app:layout_constraintLeft_toLeftOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/iconbake"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+       android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_switch_right_24"
+     app:layout_constraintTop_toBottomOf="@id/buttun_Stadiumname"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
